@@ -3,9 +3,11 @@ version: '3'
 services:
   backend:
     container_name: backend
-    build: 
+    build:
       context: .
       dockerfile: apps/docker/backend/Dockerfile
+    networks:
+      - django-react
     ports:
       - "8000:8000"
     env_file:
@@ -20,14 +22,27 @@ services:
       - "5432:5432"
     env_file:
       - ./.env
+    networks:
+      - django-react
     volumes:
       - db-data:/var/lib/postgresql/data
 
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: unless-stopped
+    networks:
+      - django-react
+    ports:
+      - "6379:6379"
+
   frontend:
     container_name: frontend
-    build: 
+    build:
       context: .
       dockerfile: apps/docker/frontend/Dockerfile
+    networks:
+      - django-react
     ports:
       - "3000:3000"
     volumes:
@@ -37,9 +52,11 @@ services:
 
   nginx:
     container_name: nginx
-    build: 
+    build:
       context: .
       dockerfile: apps/docker/nginx/Dockerfile
+    networks:
+      - django-react
     ports:
       - "80:80"
     volumes:
@@ -48,6 +65,10 @@ services:
     depends_on:
       - backend
       - frontend
+# Networks
+networks:
+  django-react:
+    driver: bridge
 
 volumes:
   db-data:
