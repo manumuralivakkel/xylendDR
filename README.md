@@ -14,14 +14,6 @@ Embark on a comprehensive journey into the world of full-stack development! Join
 - [Nginx](https://www.nginx.com/) - Advanced Load Balancer, Web Server, & Reverse Proxy.
 - [Postgres DB](https://www.postgresql.org/) - The World's Most Advanced Open Source Relational Database.
 
-## 📸 Screenshots:
-
-- Django Admin Panel:
-  <img src=".github/static/django.png" alt="Django Admin Panel"/>
-
-- Nginx:
-  <img src=".github/static/react.png" alt="Django Admin Panel"/>
-
 ## 📁 Project structure:
 
 ```
