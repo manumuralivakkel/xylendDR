@@ -4,8 +4,6 @@
 
 Embark on a comprehensive journey into the world of full-stack development! Join us for an in-depth exploration of integrating Django, React, Docker, Postgres, and Nginx. This walkthrough offers a step-by-step guide, empowering you to master the seamless integration of these powerful technologies. Unlock the potential of this robust stack and elevate your development skills to build scalable, modern web applications.
 
-### Youtube Video: [Link](https://www.youtube.com/watch?v=ZV4I9vgCwN0)
-
 ## 📚 Stack:
 
 - [Python](https://www.python.org/) - Python is a programming language that lets you work quickly and integrate systems more effectively.
